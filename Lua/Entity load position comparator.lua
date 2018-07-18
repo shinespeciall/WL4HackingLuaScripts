@@ -16,7 +16,7 @@ while true do
 		while(i < tmpEntityNum) do
 			local entityid = memory.readbyte(0x0300011b + i * 0x2C)
 			local entityx = memory.readbyte(0x0300010e + i * 0x2C) + 255 * memory.readbyte(0x0300010f + i * 0x2C)
-			local entityy = memory.readbyte(0x0300010e + i * 0x2C) + 255 * memory.readbyte(0x0300010d + i * 0x2C)
+			local entityy = memory.readbyte(0x0300010c + i * 0x2C) + 255 * memory.readbyte(0x0300010d + i * 0x2C)
 			local entitysourcex = memory.readbyte(0x03000964 + i * 3 + 1) * 64
 			local entitysourcey = memory.readbyte(0x03000964 + i * 3) * 64
 			gui.text(0, 16 * i, tostring(entityid), 0xFFFF0000, topleft)
