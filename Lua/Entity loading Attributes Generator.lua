@@ -24,12 +24,12 @@ while true do
 			local entityPalette = memory.readbyte(0x0300011F + i * 0x2C)
 			local entityPaletteoffset = memory.readbyte(0x0300011D + i * 0x2C)
 			gui.text(0, 16 * i, tostring(entityid), 0xFFFF0000, topleft)
-			gui.text(30, 16 * i, tostring(entityx - entitysourcex), 0xFFFF0000, topleft)
-			gui.text(68, 16 * i, tostring(entityy - entitysourcey), 0xFFFF0000, topleft)
-			gui.text(120, 16 * i, tostring(entityOAMprt), 0xFFFF0000, topleft)
-			gui.text(200, 16 * i, tostring(entityLayer), 0xFFFF0000, topleft)
-			gui.text(240, 16 * i, tostring(entityPalette), 0xFFFF0000, topleft)
-			gui.text(280, 16 * i, tostring(entityPaletteoffset), 0xFFFF0000, topleft)
+			gui.text(30, 16 * i, tostring(entityx - entitysourcex - 128), 0xFFFF0000, topleft)
+			gui.text(80, 16 * i, tostring(entityy - entitysourcey - 128), 0xFFFF0000, topleft)
+			gui.text(160, 16 * i, tostring(entityOAMprt), 0xFFFF0000, topleft)
+			gui.text(240, 16 * i, tostring(entityLayer), 0xFFFF0000, topleft)
+			gui.text(280, 16 * i, tostring(entityPalette), 0xFFFF0000, topleft)
+			gui.text(320, 16 * i, tostring(entityPaletteoffset), 0xFFFF0000, topleft)
 			i=i+1
 		end
 	end
