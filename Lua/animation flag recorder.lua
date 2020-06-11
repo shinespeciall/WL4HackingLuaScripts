@@ -1,6 +1,9 @@
+local pre_anim, cur_anim;
 while true do
-	if memory.readbyte(0x03001899) > 20 then -- memory.readbyte(0x030018B0) == 0 and 
-		console.writeline(memory.readbyte(0x03001899))
+	cur_anim = memory.readbyte(0x03001899)
+	if cur_anim ~= pre_anim then
+		pre_anim = cur_anim
+		console.writeline(cur_anim)
 	end
 	emu.frameadvance()
 end
